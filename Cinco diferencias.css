@@ -1,0 +1,95 @@
+body {
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(120deg, #89f7fe, #66a6ff);
+  text-align: center;
+  padding: 30px;
+  color: #222;
+}
+
+.contenedor {
+  max-width: 1200px;
+  margin: auto;
+  background: #fff;
+  padding: 25px;
+  border-radius: 15px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+}
+
+h1 {
+  font-size: 2.2em;
+  color: #004aad;
+  margin-bottom: 15px;
+}
+
+.barra_superior {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  font-size: 1.3em;
+  margin-bottom: 20px;
+}
+
+#reiniciar {
+  background: #007bff;
+  color: white;
+  border: none;
+  padding: 8px 15px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+#reiniciar:hover {
+  background: #0056b3;
+}
+
+.contenedor_imagenes {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+
+.image-box {
+  position: relative;
+}
+
+.image-box img {
+  width: 450px;
+  border-radius: 10px;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.2);
+  transition: 0.3s;
+}
+
+.image-box img:hover {
+  transform: scale(1.02);
+}
+
+.marks {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+}
+
+.mark {
+  position: absolute;
+  border: 4px solid limegreen;
+  border-radius: 50%;
+  transform: translate(-50%, -50%) scale(0);
+  animation: pop 0.4s forwards;
+}
+
+@keyframes pop {
+  to {
+    transform: translate(-50%, -50%) scale(1);
+  }
+}
+
+#message {
+  margin-top: 20px;
+  font-size: 1.5em;
+  font-weight: bold;
+}
